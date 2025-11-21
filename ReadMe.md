@@ -142,3 +142,5 @@ C-index for the unimodal MRI CNN model using different preprocessing strategies.
 
 <img src="./figures/Figure4_boxplot.png" width="30%">
 
+# Acknowledgement
+I would like to thank M31 (Toronto, Canada) for providing the sample dataset used in this repository.
