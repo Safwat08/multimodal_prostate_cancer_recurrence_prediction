@@ -19,7 +19,7 @@ Environment was handled using mamba
 
 Create and activate the environment using environment.yml
 ```bash
-mamba env create -n <env_name> -f requirements.yml
+mamba env create -n <env_name> -f environment.yml
 mamba activate <env_name>
 ```
 
