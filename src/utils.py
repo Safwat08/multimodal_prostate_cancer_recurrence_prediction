@@ -257,8 +257,8 @@ def get_dataloaders(df, fold, data_type, batch_size=4, num_workers=0, preprocess
     
     if preprocessing == "uncropped":
 
-        # ----------------- Train transforms -----------------
-        train_transforms_uncropped = Compose([
+        # train_transforms
+        train_transforms = Compose([
             LoadImaged(keys=keys_all,
                        reader=ITKReader(),
                        image_only=True),
@@ -304,8 +304,8 @@ def get_dataloaders(df, fold, data_type, batch_size=4, num_workers=0, preprocess
             ),
         ])
 
-        # ----------------- Val transforms -----------------
-        val_transforms_cropped = Compose([
+        # val_transforms
+        val_transforms = Compose([
             LoadImaged(keys=keys_all,
                        reader=ITKReader(),
                        image_only=True),
@@ -345,7 +345,7 @@ def get_dataloaders(df, fold, data_type, batch_size=4, num_workers=0, preprocess
     elif preprocessing == "precropped":
     
         # Train_transforms
-        train_transforms_cropped = Compose([
+        train_transforms = Compose([
             LoadImaged(keys=keys_all,
                        reader=ITKReader(),
                        image_only=True),
@@ -397,7 +397,7 @@ def get_dataloaders(df, fold, data_type, batch_size=4, num_workers=0, preprocess
         ])
 
         # Val_transforms
-        val_transforms_cropped = Compose([
+        val_transforms = Compose([
             LoadImaged(keys=keys_all,
                        reader=ITKReader(),
                        image_only=True),
