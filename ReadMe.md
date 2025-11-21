@@ -27,7 +27,7 @@ mamba activate <env_name>
 Create clinical_data.csv from the raw clinical JSON files: 
 
 ```bash
-python src/get_clinical.data.py
+python -m src.get_clinical.data
 ```
 
 This merges all the json files for the clinical patients and produces a "clinical_data.csv" file
@@ -45,14 +45,14 @@ Save per-fold C-index values in results/
 Description: Regularized Cox proportional hazards model using clinical data
 
 ```bash
-python src/train_clinical_linear.py
+python -m src.train_clinical_linear
 ```
 
 ## 2. Clinical MLP
 Description: Fully connected neural network using clinical data. Learning rate 1e-3
 
 ```bash
-python src/train.py --clinical_mlp_model
+python -m src.train --clinical_mlp
 ```
 
 ## 3. MRI CNN
@@ -64,35 +64,35 @@ Description: 3D CNN trained on full MRI volumes (ADC, HBV, T2W + mask channel). 
 Description: Multimodal model integrating Clinical MLP backbone to process clinical data and MRI CNN backbone to process MRI volumes. Feature embeddings from each branch passed through a risk prediction MLP
 
 ```bash
-python src/train.py --multimodal_model_full
+python -m src.train --multimodal_model_full
 ``` 
 
 ## 5. Multimodal Model — MRI Ablated
 Description: Multimodal model with MRI CNN branch ablated
 
 ```bash
-python src/train.py --mutlimodal_model_mri_ablated
+python -m src.train --mutlimodal_model_mri_ablated
 ``` 
 
 ## 6. Multimodal Model — Clinical Ablated
 Description: Multimodal model with Clinical MLP branch ablated
 
 ```bash
-python src/train.py --mutlimodal_model_clinical_ablated
+python -m src.train --mutlimodal_model_clinical_ablated
 ``` 
 
 ## 7. Clinical MLP - Learning Rate 1e-4
 Description: Fully connected neural network using clinical data (Same as #2) but with a Learning rate 1e-4
 
 ```bash
-python src/train.py --clinical_mlp_model_lr1e_4
+python -m src.train.py --clinical_mlp_model_lr1e_4
 ``` 
 
 ## 8. MRI CNN - Precropped
 Description: 3D CNN trained on full MRI volumes (ADC, HBV, T2W). However, channels cropped using T2W-mask prior to concatinating into 1 tensor. 
 
 ```bash
-python src/train.py --mri_cnn_model_precropped
+python -m src.train --mri_cnn_model_precropped
 ``` 
 
 ## ⭐ 9. Full Multimodal Model (Dual Learning Rate Optimizer)
@@ -101,13 +101,13 @@ Description: Same as #4 but uses a dual learning-rate optimizer (higher LR for t
 **The strongest-performing variant across all folds**
 
 ```bash
-python src/train.py --multimodal_model_full_diff_lr
+python -m src.train --multimodal_model_full_diff_lr
 ```
 
 # Summarize Results
 Summarize model performance and predictions:
 ```bash
-python src/merge_csv.py 
+python -m src.merge_csv
 ```
 This generates:
 
@@ -116,7 +116,7 @@ This generates:
 
 Conduct wilcoxon rank signed test on the C-index values 
 ```bash
-python src/stats.py
+python -m src.stats
 ```
 
 # Visualization:
