@@ -19,7 +19,7 @@ def main():
     ]
 
     # Figure 1
-    cindex_fig = cindex[cindex["Model/Variant"].isin(selected_models)].copy()
+    cindex_fig = cindex[cindex["Model"].isin(selected_models)].copy()
 
     rename_map = {
         "clinical_linear_model": "Clinical Linear",
@@ -32,7 +32,7 @@ def main():
 
     ordered_labels = list(rename_map.values())
 
-    cindex_fig["labels"] = cindex_fig["Model/Variant"].map(rename_map)
+    cindex_fig["labels"] = cindex_fig["Model"].map(rename_map)
 
     cindex_fig["labels"] = pd.Categorical(
         cindex_fig["labels"],
@@ -77,7 +77,7 @@ def main():
         "clinical_mlp_model_lr1e_4",
     ]
 
-    cindex_fig = cindex[cindex["Model/Variant"].isin(selected_models)].copy()
+    cindex_fig = cindex[cindex["Model"].isin(selected_models)].copy()
 
     rename_map = {
         "clinical_mlp_model": "1e-3",
@@ -86,7 +86,7 @@ def main():
 
     ordered_labels = list(rename_map.values())
 
-    cindex_fig["labels"] = cindex_fig["Model/Variant"].map(rename_map)
+    cindex_fig["labels"] = cindex_fig["Model"].map(rename_map)
 
     cindex_fig["labels"] = pd.Categorical(
         cindex_fig["labels"],
@@ -129,7 +129,7 @@ def main():
         "multimodal_model_full_diff_lr",
     ]
 
-    cindex_fig = cindex[cindex["Model/Variant"].isin(selected_models)].copy()
+    cindex_fig = cindex[cindex["Model"].isin(selected_models)].copy()
 
     rename_map = {
         "multimodal_model_full": "Single LR",
@@ -138,7 +138,7 @@ def main():
 
     ordered_labels = list(rename_map.values())
 
-    cindex_fig["labels"] = cindex_fig["Model/Variant"].map(rename_map)
+    cindex_fig["labels"] = cindex_fig["Model"].map(rename_map)
 
     cindex_fig["labels"] = pd.Categorical(
         cindex_fig["labels"],
@@ -180,7 +180,7 @@ def main():
         "mri_cnn_model_precropped",
     ]
 
-    cindex_fig = cindex[cindex["Model/Variant"].isin(selected_models)].copy()
+    cindex_fig = cindex[cindex["Model"].isin(selected_models)].copy()
 
     rename_map = {
         "mri_cnn_model": "Uncropped/4channels",
@@ -189,7 +189,7 @@ def main():
 
     ordered_labels = list(rename_map.values())
 
-    cindex_fig["labels"] = cindex_fig["Model/Variant"].map(rename_map)
+    cindex_fig["labels"] = cindex_fig["Model"].map(rename_map)
 
     cindex_fig["labels"] = pd.Categorical(
         cindex_fig["labels"],
