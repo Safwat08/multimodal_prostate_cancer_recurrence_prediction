@@ -15,11 +15,12 @@ Please download the files from the google drive link
 https://drive.google.com/drive/folders/1lrCNjbTuUtklUgmIxIN9gfCyEYdOM45e?usp=drive_link
 
 # Environment / Requirements
-Create and activate the conda environment:
+Environment was handled using mamba 
+Create and activate the environment:
 
 ```bash
-conda env create -n m31_technical -f requirements.yml
-conda activate m31_technical
+mamba env create -n <env_name> -f requirements.yml
+mamba activate <env_name>
 ```
 
 # Preprocessing
