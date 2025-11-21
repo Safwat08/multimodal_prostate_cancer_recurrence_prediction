@@ -122,5 +122,5 @@ python -m src.stats
 # Visualization:
 Recreate the figures used in the report:
 ```bash
-python src/make_figures.py
+python -m src.make_figures
 ```
