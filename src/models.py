@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-from monai.networks.nets import ResNet
 from monai.networks.blocks import Convolution
 from monai.networks.layers import Act, Norm
     
