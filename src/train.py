@@ -4,6 +4,7 @@ import argparse
 from src.utils import train_model
 from src.models import Multimodal_Model, Clinical_MLP_Model, MRI_CNN_Model
 from monai.utils import set_determinism
+import torch
 
 set_determinism(42)
 torch.backends.cudnn.deterministic = True
