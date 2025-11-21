@@ -124,3 +124,21 @@ Recreate the figures used in the report:
 ```bash
 python -m src.make_figures
 ```
+
+# Results
+C-index across models. 
+
+<img src="./figures/Figure1_boxplot.png" width="60%">
+
+C-index for the Clinical MLP model for different learning rates.
+
+<img src="./figures/Figure2_boxplot.png" width="30%">
+
+C-index of the Full Multimodal Model under different optimizer learning-rate configurations.
+
+<img src="./figures/Figure3_boxplot.png" width="30%">
+
+C-index for the unimodal MRI CNN model using different preprocessing strategies.
+
+<img src="./figures/Figure3_boxplot.png" width="30%">
+
