@@ -14,10 +14,10 @@ def main():
 
         model_name = path.stem.split("_fold")[0]
 
-        data["Model/Variant"] = model_name
+        data["Model"] = model_name
 
         rows.append(
-            data[["Model/Variant", "best_val_cindex", "fold"]]
+            data[["Model", "best_val_cindex", "fold"]]
             .rename(columns={"best_val_cindex": "C-index",
                             "fold": "Fold"})
         )
