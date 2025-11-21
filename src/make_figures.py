@@ -14,7 +14,7 @@ def main():
         "multimodal_model_clinical_ablated",
         "multimodal_model_mri_ablated",
         "clinical_mlp_model",
-        "clinical_linear",
+        "clinical_linear_model",
         "mri_cnn_model",
     ]
 
@@ -22,7 +22,7 @@ def main():
     cindex_fig = cindex[cindex["Model/Variant"].isin(selected_models)].copy()
 
     rename_map = {
-        "clinical_linear": "Clinical Linear",
+        "clinical_linear_model": "Clinical Linear",
         "clinical_mlp_model": "Unimodal Clinical MLP",
         "mri_cnn_model": "Unimodal MRI CNN",
         "multimodal_model_full": "Full Multimodal",
