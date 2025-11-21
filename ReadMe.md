@@ -16,8 +16,8 @@ https://drive.google.com/drive/folders/1lrCNjbTuUtklUgmIxIN9gfCyEYdOM45e?usp=dri
 
 # Environment / Requirements
 Environment was handled using mamba 
-Create and activate the environment:
 
+Create and activate the environment using requirements.yml
 ```bash
 mamba env create -n <env_name> -f requirements.yml
 mamba activate <env_name>
