@@ -259,7 +259,7 @@ def main():
 
     # MRI CNN precropped preprocessing
     if run_all or run_mri_cnn_precropped:
-        train_models(model_class = MRI_CNN_Model,
+        train_model(model_class = MRI_CNN_Model,
                      model_name = "mri_cnn_model_precropped",
                      data_type = "imaging",
                      model_kwargs = {"output_dim": 1,
