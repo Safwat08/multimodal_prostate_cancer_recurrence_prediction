@@ -140,5 +140,5 @@ C-index of the Full Multimodal Model under different optimizer learning-rate con
 
 C-index for the unimodal MRI CNN model using different preprocessing strategies.
 
-<img src="./figures/Figure3_boxplot.png" width="30%">
+<img src="./figures/Figure4_boxplot.png" width="30%">
 
