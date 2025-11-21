@@ -1,0 +1,16 @@
+name: m31_technical
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - scikit-learn
+  - scikit-survival
+  - monai
+  - SimpleITK
+  - itk
+  - nibabel
+  - matplotlib
+  - pytorch
+  - pycox
+  - statsmodels
+  - seaborn
